@@ -4,7 +4,7 @@
 - **Encrypt/decrypt:** Both operations supported.
 - **Efficient Implementation:**
   - Minimize bootstraps, as they dominate runtime.
-  - Use MatchValues for the S-Box and at the `MixColumns` step.
+  - Use MatchValues for the `S-Box` and at the `MixColumns` step.
 - **xor:** Performed unchecked() since bitlength is known.
 - **mix_col:**
    - Operations are decomposed.
@@ -16,10 +16,10 @@
   - Support for 16 threads throughput, one per state.
 - **Mode of Operation:**
    - Cipher mode OFB (Output Feedback) style, to XOR the stream.
-   - `Encrypt(IV(the_message), key) -> Encrypt(#, key)`
+   - `Encrypt(IV/the_message, key) -> Encrypt(#, key)`
 
 ### State matrix indices
-#### byte layoout
+#### byte layout
 
 | Row/Col | 0  | 1  | 2  | 3  |
 |---------|----|----|----|----|
