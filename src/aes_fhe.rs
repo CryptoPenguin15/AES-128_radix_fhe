@@ -1,5 +1,3 @@
-//use tfhe::shortint::{Ciphertext, ClientKey, ServerKey, gen_keys};
-
 use tfhe::integer::ciphertext::BaseRadixCiphertext;
 use tfhe::integer::{RadixClientKey, ServerKey, gen_keys_radix};
 use tfhe::shortint::Ciphertext;
